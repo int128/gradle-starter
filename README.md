@@ -1,4 +1,4 @@
-Gradle Hello World
+Gradle Hello World [![Build Status](https://travis-ci.org/int128/gradle-blank.svg?branch=master)](https://travis-ci.org/int128/gradle-blank)
 ==================
 
 This project contains following:
