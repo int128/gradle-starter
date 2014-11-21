@@ -1,10 +1,5 @@
 language: java
-jdk:
-  - oraclejdk7
-install:
-  - ./gradlew assemble
-script:
-  - ./gradlew check
+jdk: oraclejdk7
 
 env:
   global:
