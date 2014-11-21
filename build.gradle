@@ -1,12 +1,16 @@
 plugins {
     id 'java'
     id 'groovy'
+    id 'application'
     id 'maven-publish'
     id 'com.jfrog.bintray' version '0.6'
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_7
 targetCompatibility = JavaVersion.VERSION_1_7
+
+mainClassName             = 'Main'
+applicationDefaultJvmArgs = ['-Xms512m', '-Xmx512m']
 
 repositories {
     jcenter()

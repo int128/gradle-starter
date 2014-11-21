@@ -9,20 +9,54 @@ This project contains following:
   * Building Java and Groovy sources
   * Publishing the artifact to Bintray
 * Gradle wrapper
+* Docker and [Fig](http://www.fig.sh) ready
 
 
-Build
------
+How to Run
+----------
 
-Run the build task.
+Run the application.
 
 ```sh
-./gradlew build
+./gradlew run
 ```
 
 
-Publish
--------
+Dockerize
+---------
+
+### Using Docker command
+
+Build a container image.
+
+```sh
+docker build -t int128/gradle-blank .
+```
+
+Run a container.
+
+```sh
+docker run --rm int128/gradle-blank
+```
+
+
+### Using Fig
+
+Build a container image.
+
+```sh
+fig build
+```
+
+Run a container.
+
+```sh
+fig up
+```
+
+
+Publish to Bintray
+------------------
 
 Update `gradle.properties` in the repository.
 
