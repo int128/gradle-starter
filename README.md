@@ -72,3 +72,11 @@ Run the upload task with publishing version.
 ```sh
 ./gradlew -Pversion=x.y.z bintrayUpload
 ```
+
+Bintray credential can be provided by environment variables.
+
+```sh
+export BINTRAY_USER=example
+export BINTRAY_KEY=secret
+./gradlew -Pversion=x.y.z bintrayUpload
+```

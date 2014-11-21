@@ -2,6 +2,8 @@ plugins {
     id 'java'
     id 'groovy'
     id 'application'
+
+    // Plugins for publishing to Bintray
     id 'maven-publish'
     id 'com.jfrog.bintray' version '0.6'
 }
@@ -23,6 +25,9 @@ dependencies {
     testRuntime 'org.objenesis:objenesis:2.1'
 }
 
+/*
+ * Tasks and settings for publishing to Bintray
+ */
 task javadocJar(type: Jar, dependsOn: Javadoc) {
     from "${buildDir}/docs/javadoc"
     classifier = 'javadoc'
@@ -69,8 +74,8 @@ publishing {
 }
 
 bintray {
-    user = project.properties.bintrayUser
-    key = project.properties.bintrayKey
+    user = System.getenv('BINTRAY_USER') ?: project.properties.bintrayUser
+    key  = System.getenv('BINTRAY_KEY')  ?: project.properties.bintrayKey
     publications = ['maven']
     pkg {
         repo = 'maven'
