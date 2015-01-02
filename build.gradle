@@ -5,7 +5,7 @@ plugins {
 
     // Plugins for publishing to Bintray
     id 'maven-publish'
-    id 'com.jfrog.bintray' version '0.6'
+    id 'com.jfrog.bintray' version '1.0'
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_7
