@@ -28,7 +28,7 @@ dependencies {
 /*
  * Tasks and settings for publishing to Bintray
  */
-task javadocJar(type: Jar, dependsOn: Javadoc) {
+task javadocJar(type: Jar, dependsOn: javadoc) {
     from "${buildDir}/docs/javadoc"
     classifier = 'javadoc'
 }
