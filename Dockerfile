@@ -1,9 +1,7 @@
-from dockerfile/java:oracle-java7
- 
-run mkdir -p /usr/src/app
-workdir /usr/src/app
- 
+from java:8
+
 add . /usr/src/app
+workdir /usr/src/app
 run ./gradlew assemble
  
 cmd ["./gradlew", "run"]
