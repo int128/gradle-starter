@@ -9,7 +9,7 @@ This project contains following:
   * Building Java and Groovy sources
   * Publishing the artifact to Bintray
 * Gradle wrapper
-* Docker and [Fig](http://www.fig.sh) ready
+* Docker Compose ready
 
 
 How to Run
@@ -25,33 +25,16 @@ Run the application.
 Dockerize
 ---------
 
-### Using Docker command
-
-Build a container image.
+Build and run a container.
 
 ```sh
+# Docker
 docker build -t int128/gradle-blank .
-```
-
-Run a container.
-
-```sh
 docker run --rm int128/gradle-blank
-```
 
-
-### Using Fig
-
-Build a container image.
-
-```sh
-fig build
-```
-
-Run a container.
-
-```sh
-fig up
+# Docker Compose
+docker-compose build
+docker-compose up -d
 ```
 
 
