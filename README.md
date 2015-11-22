@@ -1,4 +1,4 @@
-Gradle Hello World [![Build Status](https://travis-ci.org/int128/gradle-blank.svg?branch=master)](https://travis-ci.org/int128/gradle-blank) [![Gradle Status](https://gradleupdate.appspot.com/int128/gradle-blank/status.svg?branch=master)](https://gradleupdate.appspot.com/int128/gradle-blank/status)
+Gradle Hello World [![Build Status](https://travis-ci.org/int128/gradle-starter.svg?branch=master)](https://travis-ci.org/int128/gradle-starter) [![Gradle Status](https://gradleupdate.appspot.com/int128/gradle-starter/status.svg?branch=master)](https://gradleupdate.appspot.com/int128/gradle-starter/status)
 ==================
 
 This project contains following:
@@ -29,8 +29,8 @@ Build and run a container.
 
 ```sh
 # Docker
-docker build -t int128/gradle-blank .
-docker run --rm int128/gradle-blank
+docker build -t int128/gradle-starter .
+docker run --rm int128/gradle-starter
 
 # Docker Compose
 docker-compose build
