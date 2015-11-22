@@ -41,8 +41,6 @@ docker-compose up -d
 Publish to Bintray
 ------------------
 
-Update `gradle.properties` in the repository.
-
 You must have Bintray account and provide its credential in `~/.gradle/gradle.properties` as follows:
 
 ```ini

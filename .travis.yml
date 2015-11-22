@@ -2,3 +2,5 @@ sudo: false
 language: java
 jdk: oraclejdk7
 
+after_success:
+- test ${TRAVIS_TAG} && ./gradlew bintrayUpload
