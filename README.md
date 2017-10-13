@@ -1,63 +1,44 @@
-Gradle Hello World [![Build Status](https://travis-ci.org/int128/gradle-starter.svg?branch=master)](https://travis-ci.org/int128/gradle-starter) [![Gradle Status](https://gradleupdate.appspot.com/int128/gradle-starter/status.svg?branch=master)](https://gradleupdate.appspot.com/int128/gradle-starter/status)
+Gradle Hello World [![CircleCI](https://circleci.com/gh/int128/gradle-starter.svg?style=shield)](https://circleci.com/gh/int128/gradle-starter) [![Gradle Status](https://gradleupdate.appspot.com/int128/gradle-starter/status.svg?branch=master)](https://gradleupdate.appspot.com/int128/gradle-starter/status)
 ==================
 
 This project contains following:
 
-* Java example class: `Main.java`
-* Spock test: `MainSpec.groovy`
+* Example app: `Main.java`
+* Example test: `MainSpec.groovy`
 * Build script: `build.groovy`
-  * Building Java and Groovy sources
-  * Publishing the artifact to Bintray
+* Running app
+* Publishing an artifact to Bintray (and Maven Central)
 * Gradle wrapper
-* Docker Compose ready
 
 
-How to Run
-----------
+Getting Started
+---------------
 
-Run the application.
-
-```sh
-./gradlew run
 ```
-
-
-Dockerize
----------
-
-Build and run a container.
-
-```sh
-# Docker
-docker build -t int128/gradle-starter .
-docker run --rm int128/gradle-starter
-
-# Docker Compose
-docker-compose build
-docker-compose up -d
+./gradlew run
 ```
 
 
 Publish to Bintray
 ------------------
 
-You must have Bintray account and provide its credential in `~/.gradle/gradle.properties` as follows:
+You must provide Bintray credential in `~/.gradle/gradle.properties` as follows:
 
-```ini
+```properties
 bintrayUser=example
 bintrayKey=secret
 ```
 
-Run the upload task with publishing version.
-
-```sh
-./gradlew -Pversion=x.y.z bintrayUpload
+```
+./gradlew bintrayUpload
 ```
 
-Bintray credential can be provided by environment variables.
+### CircleCI integration
 
-```sh
-export BINTRAY_USER=example
-export BINTRAY_KEY=secret
-./gradlew -Pversion=x.y.z bintrayUpload
-```
+CircleCI builds the plugin continuously.
+It also publishes an artifact if a tag is pushed and following variables are set.
+
+Environment Variable        | Value
+----------------------------|------
+`$BINTRAY_USER`             | Bintray user name
+`$BINTRAY_KEY`              | Bintray key
