@@ -4,6 +4,7 @@ plugins {
     id 'application'
     id 'maven-publish'
     id 'com.jfrog.bintray' version '1.7.3'
+    id "org.sonarqube" version "3.3"
 }
 
 description = 'A template project of Gradle'
@@ -22,6 +23,14 @@ applicationDefaultJvmArgs = ['-Xms512m', '-Xmx512m']
 
 repositories {
     jcenter()
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "rumburakcloud_gradle-starter"
+    property "sonar.organization", "rumburakcloud"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
 }
 
 dependencies {
