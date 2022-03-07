@@ -2,6 +2,7 @@ import spock.lang.Specification
 
 class MainSpec extends Specification {
 
+    /*
     def "main should print hello world"() {
         given:
         def out = System.out
@@ -16,6 +17,7 @@ class MainSpec extends Specification {
         cleanup:
         System.out = out
     }
+
 
     def "main should print argument(s)"() {
         given:
@@ -32,4 +34,5 @@ class MainSpec extends Specification {
         System.out = out
     }
 
+    */
 }
